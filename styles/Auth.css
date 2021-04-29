@@ -1,0 +1,333 @@
+
+a:focus, a:active {
+    text-decoration: none;
+    outline: none;
+    transition: all 300ms ease 0s;
+}
+
+.inputAuth, select, textarea {
+    outline: none;
+    appearance: unset !important;
+}
+
+.inputAuth:focus, select:focus, textarea:focus {
+    outline: none;
+    box-shadow: none !important;
+}
+
+.clear {
+    clear: both;
+}
+
+.logoReg {
+    font-size: 28px;
+    margin: 0;
+    /* margin-right: 30px; */
+    font-weight: 600;
+    text-align: center;
+    width: 100%;
+    padding-top: 40px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.logoReg h1 a {
+    color: #384046;
+}
+
+.AuthTitle {
+    font-size: 18px;
+    margin: 0;
+    font-weight: 600;
+    text-align: center;
+    width: 100%;
+    padding-bottom: 40px;
+    letter-spacing: 1px;
+}
+
+.main {
+    padding: 50px 0;
+    position: relative;
+    width: 100%;
+    background: #e7f0fd;
+}
+
+.containerReg {
+    width: 520px;
+    background: #fff;
+    margin: 0 auto;
+    box-shadow: 0px 10px 9.9px 0.1px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+}
+
+.sign-up-content {
+    padding: 40px 60px 32px 60px;
+    position: relative;
+    z-index: 99;
+    background-color: #fff;
+}
+
+.form-radio {
+    text-align: center;
+    margin: 0 -10px;
+    margin-bottom: 40px;
+}
+
+.form-radio .inputRadio {
+    visibility: hidden;
+}
+
+.form-radio .inputRadio + label {
+    margin: 0 8px;
+    padding: 11px 31px;
+    box-sizing: border-box;
+    position: relative;
+    display: inline-block;
+    border: solid 2px #dadce0;
+    background-color: #FFF;
+    font-size: 14px;
+    font-weight: 600;
+    color: #384046;
+    text-align: center;
+    transition: border-color .15s ease-out, color .25s ease-out, background-color .15s ease-out, box-shadow .15s ease-out;
+    border-radius: 999px;
+}
+
+.form-radio .inputRadioChecked {
+    visibility: hidden;
+}
+
+.form-radio .inputRadioChecked + label {
+    margin: 0 8px;
+    padding: 11px 31px;
+    box-sizing: border-box;
+    position: relative;
+    display: inline-block;
+    border: solid 2px #1da0f2;
+    background-color: #1da0f2;
+    font-size: 14px;
+    font-weight: 600;
+    color: #FFF;
+    text-align: center;
+    transition: border-color .15s ease-out, color .25s ease-out, background-color .15s ease-out, box-shadow .15s ease-out;
+    border-radius: 999px;
+}
+
+.inputAuth {
+    border: solid 2px #dadce0;
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 14px;
+    font-family: Poppins;
+    padding: 16px 30px 16px 30px;
+}
+
+.form-textbox {
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.form-textbox label {
+    font-weight: 600;
+    color: #384046;
+    font-size: 14px;
+}
+
+.inputAuth[type=checkbox]:not(old) {
+    width: 2em;
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+    display: none;
+}
+
+.inputAuth[type=checkbox]:not(old) + label {
+    display: inline-block;
+    margin-top: 27px;
+    margin-bottom: 45px;
+}
+
+.inputAuth[type=checkbox]:not(old) + label > span {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 15px;
+    margin-bottom: 5px;
+    border: 1px solid #dadce0;
+    border-radius: 2px;
+    background: white linear-gradient(white, white);
+    vertical-align: bottom;
+}
+
+.inputAuth[type=checkbox]:not(old):checked + label > span {
+    background-image: linear-gradient(white, white);
+}
+
+.inputAuth[type=checkbox]:not(old):checked + label > span:before {
+    content: '\f26b';
+    display: block;
+    color: #222;
+    font-size: 11px;
+    line-height: 1.1;
+    text-align: center;
+    font-family: 'Material-Design-Iconic-Font';
+    font-weight: bold;
+}
+
+.label-agree-term {
+    color: #888;
+}
+
+.term-service {
+    color: #1da0f2;
+    text-decoration: none;
+}
+
+.term-service:hover {
+    text-decoration: underline;
+}
+
+.submit {
+    background: #1da0f2;
+    color: #FFF;
+    transition: all 0.5s;
+    border: none;
+    padding: 15px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: Poppins;
+    border-radius: 999px;
+}
+
+.submit:hover {
+    background: #0c85d0;
+}
+
+.loginhere {
+    text-align: center;
+    color: #888;
+    margin-top: 50px;
+}
+
+.loginhere-link {
+    color: #1da0f2;
+    text-decoration: none;
+}
+
+.loginhere-link:hover {
+    text-decoration: underline;
+}
+
+.social-button {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+}
+
+.social-il {
+    border: none;
+}
+
+.btn-google {
+    color: #384046;
+    background-color: #ffffff;
+    width: 100%;
+    height: 50px;
+    font-size: 14px;
+    border: 1px solid #dadce0;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    font-weight: 600;
+    font-family: Poppins;
+    border-radius: 999px;
+    transition: all 0.5s;
+}
+
+.btn-google:hover {
+    color: #384046;
+    background-color: #f8faff;
+    border: 1px solid #d2e3fc;
+}
+
+.btn-facebook {
+    color: #fff;
+    background-color: #1877F2;
+    width: 100%;
+    height: 50px;
+    font-size: 14px;
+    border: 1px solid #1877F2;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    font-weight: 600;
+    font-family: Poppins;
+    border-radius: 999px;
+    transition: all 0.5s;
+}
+
+.btn-facebook:hover {
+    color: #fff;
+    background-color: #08499D;
+    border: 1px solid #08499D;
+}
+
+.or-container {
+    align-items: center;
+    color: #dadce0;
+    display: flex;
+    margin: 25px 0
+}
+
+.line-separator {
+    background-color: #dadce0;
+    flex-grow: 5;
+    height: 1px
+}
+
+.or-label {
+    flex-grow: 1;
+    margin: 0 15px;
+    text-align: center
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .sign-up-content {
+        padding: 40px 20px 32px 20px;
+        width: 100%;
+    }
+
+    .form-radio .inputAuth + label {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .containerReg {
+        width: 380px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .form-textbox label {
+        left: 15px;
+    }
+
+    .containerReg {
+        width: auto;
+    }
+
+    .inputAuth {
+        padding: 16px 30px 16px 30px;
+    }
+}
