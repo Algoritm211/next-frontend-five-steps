@@ -23,12 +23,11 @@ export const registerUser = (userData) => async (dispatch) => {
 export const loginUser = (email, password) => async (dispatch) => {
   try {
     dispatch(setAppReady(false))
-    console.log('asasd')
     const data = await authAPI.login(email, password)
     await localStorage.setItem('authToken', data.token)
     dispatch(setUserAuthData(data.user))
     // window.location.reload()
-    window.location.assign('/main')
+    window.location.assign('/')
     dispatch(setAppReady(true))
   } catch (error) {
     dispatch(setAuthError(error.response.data.message))
@@ -48,7 +47,7 @@ export const authUser = () => async (dispatch) => {
     dispatch(toggleIsLoading(false))
   } else {
     dispatch(setUserAuthData(data.user))
-    localStorage.setItem('authToken', data.token)
+    // localStorage.setItem('authToken', data.token)
     dispatch(setAppReady(true))
     dispatch(toggleIsLoading(false))
   }

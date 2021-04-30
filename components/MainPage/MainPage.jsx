@@ -1,7 +1,11 @@
 import React from 'react';
 import Link from "next/link";
+import {useSelector} from "react-redux";
+import {getIsAuth} from "../../store/auth-reducer/auth-selector";
 
 const MainPage = () => {
+  const isAuth = useSelector(getIsAuth)
+
   return (
     <div className='mainContainer'>
       <div className='item N1'>

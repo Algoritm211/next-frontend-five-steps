@@ -1,0 +1,37 @@
+
+.cont {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.delete-text {
+  color: red;
+  font-size: 13px;
+  cursor: pointer;
+
+}
+
+.active {
+  display: flex;
+}
+
+.deleteAccount {
+  background: rgba(33, 38, 42, 0.5);
+  padding-top: calc(100vh / 2 - 190px);
+}
+
+.modal-dialog {
+
+}
+
+@media (max-width: 1200px) {
+  .cont {
+    width: 80%;
+  }
+}
+
+@media (max-width: 1030px) {
+  .cont {
+    width: 100%;
+  }
+}

@@ -1,0 +1,126 @@
+.acc-title{
+    color:#384046;
+    font-size: 20px;
+    font-weight: 600;
+    width: 330px;
+    height: 48px;
+    line-height: 48px;
+    align-items: center;
+}
+.acc-join-title{
+    font-size: 10px;
+    color:#384046;
+    line-height: 48px;
+    align-items: center;
+}
+
+.acc-subtitle{
+    color:#384046;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.avatar-img{
+    height: 80px;
+    width: 80px;
+    object-fit: cover;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    border-radius: 999px;
+}
+
+.avatar-change{
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-right: 26px;
+    margin-left: 26px;
+    color: #f26c4f;
+    text-decoration: underline;
+}
+.avatar-delete{
+    font-size: 12px;
+    color: crimson;
+    font-weight: 600;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.form-select {
+    width: auto;
+    display: inline-block;
+    font-size: 16px;
+}
+.form-select:active, .form-select:focus{
+    border-color: #f26c4f;
+}
+.inputAcc:active, .inputAcc:focus {
+    box-shadow: 0 0 10px rgb(242 108 79 / 80%);
+    outline:none;
+}
+.inputAcc{
+    outline:none;
+    width: 100%;
+    border: solid 2px #dadce0;
+    box-sizing: border-box;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 13px;
+    padding: 10px 20px;
+}
+.form-control{
+    border-radius: 0;
+    max-height: 300px;
+}
+.select-wrap{
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .acc-sidebar{
+        width: 200px;
+    }
+}
+@media (width: 768px){
+    .acc-sidebar{
+        width: 200px;
+    }
+    .e-profile{
+        max-width: 428px;
+    }
+    .acc-title{
+        width: 150px;
+        margin-right: auto;
+    }
+    .form-select{
+        font-size: 16px;
+    }
+}
+@media (max-width: 767px){
+    .acc-sidebar{
+        display: none;
+    }
+}
+@media (max-width: 768px) {
+    .e-profile{
+        max-width: 428px;
+        margin: auto;
+    }
+    .acc-title{
+        width: 150px;
+        margin-right: auto;
+    }
+    .form-select{
+        font-size: 16px;
+    }
+}
+@media (max-width: 992px) {
+    .form-select{
+        font-size: 12px;
+    }
+}
+@media (max-width: 407px) {
+    .select-wrap {
+        display: grid;
+    }
+}

@@ -1,0 +1,134 @@
+/**
+* Card CSS
+*/
+.card{
+  padding: 25px;
+  min-height: 254px;
+  height: 100%;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.card-title {
+  font-size: 16px;
+  font-weight: 600;
+  height: 50px;
+}
+
+.card-tag{
+  background-color: #0d8502;
+  border-radius: 999px;
+}
+.card-tag-text{
+  font-weight: 700;
+  font-size: 12px;
+  color: #ffffff;
+  font-family: "Open Sans", serif;
+}
+.like-text{
+  font-size: 12px;
+  color: #000000;
+  font-weight: bold;
+  font-family: "Open Sans", serif;
+}
+
+.author-info {
+ font-size: 12px;
+}
+
+@media (max-width: 991px) {
+  .author-info {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 710px) {
+  .author-info {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 510px) {
+  .card{
+    width: 100%;
+  }
+  .author-info {
+    font-size: 10px;
+  }
+  .card-title{
+    margin-bottom: 30px;
+  }
+}
+
+.progress{
+  padding: 0;
+  height: 5px;
+  margin-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.progress-text{
+  padding: 0;
+  font-size: 17px;
+  line-height: 17px;
+  margin-bottom: 5px;
+  color: #000000;
+  font-weight: bold;
+  font-family: "Open Sans";
+  text-align: left;
+}
+
+.card-hr{
+  margin-bottom: 12px;
+}
+
+.img-avatar{
+  height: 41.78px;
+  object-fit: cover;
+}
+
+
+@media (min-width: 768px){
+  .img-avatar{
+    width: 48px;
+    height: 48px;
+  }
+}
+@media (max-width: 767px){
+  .img-avatar{
+    width: 30px;
+    height: 30px;
+  }
+  .media-padding{
+    padding: 0px;
+  }
+}
+@media (max-width: 992px){
+  .img-avatar{
+    width: 36px;
+    height: 36px;
+  }
+}
+@media (min-width: 510px) and (max-width: 620px){
+  .media-padding{
+    padding-left: 0.75rem;
+  }
+}
+.markerInProcess{
+  background-color: rgb(57, 176, 101);
+  border-radius: 999px;
+  display: flex;
+  height: 40px;
+  width: 100%;
+}
+.titleCourseState{
+  color: white;
+  font-size: 12px;
+  margin: auto;
+  line-height: inherit;
+}

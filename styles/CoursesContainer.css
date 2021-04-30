@@ -1,0 +1,128 @@
+.courses-title{
+  font-size: 28px;
+  font-weight: 600;
+  color: #384046;
+}
+.courses-subtitle{
+  font-size: 20px;
+  font-weight: 300;
+  color: #4f5a62;
+}
+.courses-filter{
+  height: 24px;
+  align-items: center;
+}
+.courses-journal{
+  padding: 0;
+}
+.courses-checkbox{
+  margin: 5px 20px 5px 0;
+  line-height: 24px;
+  align-items: center;
+}
+.courses-label{
+  font-size: 12px;
+  line-height: 24px;
+  align-items: center;
+}
+.courseContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  /*margin-top: 20px;*/
+  grid-gap: 20px;
+}
+.course-zapyt{
+  font-size: 12px;
+  font-weight: 600;
+}
+.courses-button{
+  text-align: center;
+  justify-content: center;
+  color: white;
+  background-color: #7e919f;
+  border-radius: 999px;
+  border: none;
+  font-size: 12px;
+  line-height: 40px;
+  max-width: 100%;
+  min-width: 150px;
+}
+.courses-sidebar-mobile{
+  position: fixed;
+  padding-top: 10px;
+  top: 70px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: white;
+  z-index: 600;
+}
+.course-materials{
+  justify-content: left;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 24px;
+  color: #4f5a62;
+}
+.mobile-filter-toggle{
+  justify-content: end;
+  float: right;
+  font-size: 12px;
+  margin-left: auto;
+  line-height: 24px;
+  color: #4f5a62;
+  visibility: hidden;
+}
+.fa-sliders-h{
+  color: #f26c4f;
+}
+.mobile-filter-toggle .fa-times {
+  width: 25px;
+  z-index: 699;
+  position: fixed;
+  top: 80px;
+  justify-content: center;
+  text-align: center;
+  right: .75rem;
+  font-size: 24px;
+  color: #f26c4f;
+}
+.mobile-pagination{
+  display: none;
+}
+@media (max-width: 1200px) {
+  .courseContainer {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .courses-sidebar{
+    display: none;
+  }
+  .mobile-filter-toggle{
+    visibility: visible;
+  }
+  .mobile-pagination{
+    display: flex;
+    margin-bottom: 1rem!important;
+  }
+}
+
+@media (max-width: 710px) {
+  .coursePage{
+    justify-content: center;
+  }
+  .courseContainer {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 510px) {
+  .coursePage{
+    justify-content: center;
+  }
+  .courseContainer {
+    grid-template-columns: 1fr;
+  }
+}
+

@@ -1,0 +1,134 @@
+.preview-container{
+    height: calc(100vh - 70px);
+    margin: auto;
+}
+.preview-title{
+    font-size: 54px;
+    font-weight: 600;
+    color: #384046;
+}
+.preview-subtitle{
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: normal;
+    color: #4f5a62;
+}
+.preview-button{
+    text-align: center;
+    justify-content: center;
+    color: white;
+    background-color: #f26c4f;
+    border-radius: 999px;
+    border: none;
+    font-size: 16px;
+    line-height: 48px;
+    max-width: 100%;
+    min-width: 200px;
+}
+.preview-image {
+    border-radius: 999px;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+.preview-block{
+    margin: auto;
+}
+.course-text{
+    font-size: 14px;
+}
+.advantage-plate{
+    height: 48px;
+    margin-bottom: 1.5rem;
+}
+.advantage-image{
+    font-size: 40px;
+    line-height: 48px;
+    width: 50px;
+    text-align: center;
+    justify-content: center;
+    color: #f26c4f;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+.advantage-text{
+    font-size: 14px;
+    font-weight: 600;
+    color: #384046;
+    display: flex;
+    margin: 0;
+    align-items: center;
+}
+.preview-container2{
+    margin-bottom: 200px;
+}
+.preview-color{
+    background-color: white;
+    margin-bottom: 200px;
+}
+.preview-row{
+    width: 100%;
+}
+.lector-image {
+    border-radius: 999px;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    justify-content: center;
+    margin: 2rem auto;
+}
+.lector-about{
+    margin: auto;
+}
+.preview-button-block{
+    justify-content: start;
+    display: flex;
+}
+.preview-button-block2{
+    justify-content: center;
+    display: flex;
+}
+@media (max-width: 767px){
+    .preview-block{
+        margin-top: 5.5rem;
+        margin-bottom: 5.5rem;
+    }
+    .advantage-block{
+        margin-top: 50px;
+    }
+    .preview-container{
+        height: auto;
+        justify-content: center;
+    }
+}
+@media (max-width: 768px){
+    .preview-button-block{
+        text-align: center;
+        justify-content: center;
+        display: flex;
+    }
+    .preview-button-block2{
+        text-align: center;
+        display: block;
+    }
+    .preview-title{
+        font-size: 36px;
+        text-align: center;
+    }
+    .preview-subtitle{
+        text-align: center;
+        font-size: 20px;
+    }
+    .preview-container2{
+        margin-top: 200px;
+    }
+    .lector-image{
+        width: 200px;
+        height: 200px;
+    }
+    .lector-about{
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+}
+
