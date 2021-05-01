@@ -6,6 +6,7 @@ import { getIsAuth, getIsLoading, getUserData } from '../../store/auth-reducer/a
 import { useFormik } from 'formik'
 import { deleteAvatar, updateUserInfo, uploadAvatar } from '../../store/auth-reducer/user-thunks'
 import * as Yup from 'yup'
+import {useRouter} from "next/router";
 
 const editProfileSchema = Yup.object().shape({
 	name: Yup.string()
@@ -24,6 +25,7 @@ const MyProfile = () => {
 	const dispatch = useDispatch()
 	const isLoading = useSelector(getIsLoading)
 	const isAuth = useSelector(getIsAuth)
+	const noUserPhotoPath = '/assets/user/nouserphoto.png'
 
 	const formik = useFormik({
 		enableReinitialize: true,
@@ -97,7 +99,7 @@ const MyProfile = () => {
 								</div>
 								<div className='col-12 col-md-8 col-lg-6 col-xl-5'>
 									<img className='avatar-img'
-											 src={user.avatar ? `${process.env.REACT_APP_URL}/${user.avatar}` : noUserPhoto}
+											 src={user.avatar ? `${process.env.REACT_APP_URL}/${user.avatar}` : noUserPhotoPath}
 											 alt='avatar' />
 									<input type={'file'} id={'avatar'} name={'avatar'} onChange={onHandleImage}
 												 multiple={false}

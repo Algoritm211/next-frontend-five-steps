@@ -7,6 +7,7 @@ import {countEntries} from "../../util-funcs/entries-two-arr-counter";
 import {loadCurrentCourse, toggleLikeCourse} from "../../../store/courses-reducer/courses-thunks";
 import {clearCurrentLesson} from "../../../store/lesson-reducer/lesson-reducer";
 import {clearCurrentCourse} from "../../../store/courses-reducer/courses-reducer";
+import {useRouter} from "next/router";
 
 const categoryToUkr = {
   it: 'IT',
@@ -27,7 +28,7 @@ const colors = {
 const CourseCard = (props) => {
 
   const dispatch = useDispatch()
-  // const history = useHistory()
+  const router = useRouter()
   const course = props.course
   const {category, title, rating, author} = course
   const userInfo = useSelector(getUserData)
@@ -55,7 +56,7 @@ const CourseCard = (props) => {
     dispatch(clearCurrentLesson())
     dispatch(clearCurrentCourse())
     dispatch(loadCurrentCourse(course._id))
-    // history.push('/editor')
+    router.push('/editor')
   }
 
 

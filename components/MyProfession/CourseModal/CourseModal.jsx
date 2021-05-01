@@ -4,6 +4,7 @@ import * as Yup from 'yup'
 import { useDispatch } from 'react-redux'
 import { coursesAPI } from '../../../api/courses-api'
 import { setCurrentCourse } from '../../../store/courses-reducer/courses-reducer'
+import {useRouter} from "next/router";
 
 const createCourseValidationSchema = Yup.object().shape({
 	title: Yup.string()
@@ -20,7 +21,7 @@ const createCourseValidationSchema = Yup.object().shape({
 
 const CourseModal = ({ isModalOpen, setIsModalOpen }) => {
 	const dispatch = useDispatch()
-
+	const router = useRouter()
 	const formik = useFormik({
 		enableReinitialize: true,
 		validationSchema: createCourseValidationSchema,
@@ -32,7 +33,7 @@ const CourseModal = ({ isModalOpen, setIsModalOpen }) => {
 		onSubmit: async (values) => {
 			const data = await coursesAPI.createCourse(values)
 			dispatch(setCurrentCourse(data.course))
-			// history.push('/editor')
+			await router.push('/editor')
 		},
 	})
 

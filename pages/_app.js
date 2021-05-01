@@ -10,6 +10,9 @@ import '../styles/MyProf.css'
 import '../styles/MyProfile.css'
 import '../styles/MySettings.css'
 import '../styles/MyRootStyles.css'
+import '../styles/LessonPage.css'
+import '../styles/Loader.css'
+import '../styles/Editor.css'
 import {wrapper} from "../store/store";
 import App from "next/app";
 import NextNProgress from "nextjs-progressbar";
@@ -17,6 +20,7 @@ import React, {useEffect} from "react";
 import {authAPI} from "../api/auth-api";
 import {useDispatch} from "react-redux";
 import {authUser} from "../store/auth-reducer/auth-thunks";
+import Head from "next/head";
 
 
 function MyComponent({ children }) {
@@ -38,6 +42,12 @@ class MyApp extends App {
     const {Component, pageProps} = this.props;
     return (
       <MyComponent>
+        <Head>
+          <meta charSet="utf-8"/>
+          <meta name="viewport" content="width=device-width, initial-scale=1"/>
+          <meta name="theme-color" content="#000000"/>
+          <title>Five steps</title>
+        </Head>
         <NextNProgress
           color="#f26c4f"
           startPosition={0.3}

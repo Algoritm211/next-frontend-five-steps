@@ -1,9 +1,10 @@
 import React from 'react';
-import MyProf from "../../components/MyProfession/MyProf";
+import MyProfile from "../../components/MyProfile/MyProfile";
+
 
 const Account = () => {
   return (
-    <MyProf/>
+    <MyProfile />
   );
 };
 

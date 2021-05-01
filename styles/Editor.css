@@ -1,0 +1,43 @@
+.editor-title{
+    font-size: 20px;
+    font-weight: 600;
+}
+.editor-subtitle{
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.2;
+}
+.editor-menu{
+    background-color: #ebebeb;
+    padding: 20px 0;
+}
+.editor-step{
+    font-size: 16px;
+    font-weight: 600;
+    color: #384046;
+    margin: 0;
+    width: 100px;
+}
+.editor-step-active{
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+    width: 100px;
+    color: white;
+}
+.editor-select{
+    padding-top: 10px;
+    padding-bottom: 0;
+    cursor: pointer;
+}
+.editor-task{
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+.editor-select-active{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #f26c4f;
+    color: white;
+    cursor: pointer;
+}

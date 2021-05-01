@@ -81,7 +81,7 @@
     margin: auto;
 }
 .preview-button-block{
-    justify-content: start;
+    justify-content: flex-start;
     display: flex;
 }
 .preview-button-block2{

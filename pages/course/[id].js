@@ -5,7 +5,6 @@ import {useDispatch, useSelector} from "react-redux";
 import Link from "next/link";
 import {wrapper} from "../../store/store";
 import {coursesAPI} from "../../api/courses-api";
-import {authUser} from "../../store/auth-reducer/auth-thunks";
 import {getUserData} from "../../store/auth-reducer/auth-selector";
 import {subscribeToCourse, unsubscribeCourse} from "../../store/courses-reducer/courses-thunks";
 import MainLayout from "../../components/MainLayout/MainLayout";

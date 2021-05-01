@@ -5,14 +5,13 @@ import ProfileNavbar from '../MyProfile/ProfileNavbar/ProfileNavbar'
 import { useDispatch, useSelector } from 'react-redux'
 import { getIsAuth, getIsLoading, getUserData } from '../../store/auth-reducer/auth-selector'
 import { deleteAccount } from '../../store/auth-reducer/user-thunks'
-import Error403 from '../Errors/Error403/Error403'
-import Loader from '../Loader/Loader'
 import Link from "next/link";
+import {useRouter} from "next/router";
 
 
 const MySettings = () => {
+	const router = useRouter()
 	const dispatch = useDispatch()
-	const history = useHistory()
 	const [isModalOpen, setIsModalOpen] = useState(false)
 	const user = useSelector(getUserData)
 	const isAuth = useSelector(getIsAuth)
@@ -20,16 +19,16 @@ const MySettings = () => {
 
 	const onDeleteAccount = () => {
 		dispatch(deleteAccount())
-		history.push('/main')
+		router.push('/')
 	}
 
-	if (isLoading) {
-		return <Loader />
-	}
+	// if (isLoading) {
+	// 	return <Loader />
+	// }
 
-	if (!isAuth) {
-		return <Error403 />
-	}
+	// if (!isAuth) {
+	// 	return <Error403 />
+	// }
 	return (
 		<MainLayout>
 			<div className='container mt-5'>

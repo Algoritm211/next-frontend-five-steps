@@ -84,7 +84,7 @@ body{
     float: right;
     align-items: center;
     line-height: 24px;
-    justify-content: end;
+    justify-content: flex-end;
 }
 .guid-label{
     font-size: 12px;
@@ -134,7 +134,7 @@ body{
         line-height: 24px;
     }
     .guid-journal-r{
-        justify-content: start;
+        justify-content: flex-start;
         width: 100%;
         display: flex;
         align-items: center;
