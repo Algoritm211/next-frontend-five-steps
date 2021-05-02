@@ -1,9 +1,9 @@
 import { articlesAPI } from '../../api/articles-api'
 import { addArticles, setArticles, setPage } from './articles-reducer'
 
-export const loadPageArticles = (filterObj, page) => async (dispatch) => {
+export const loadPageArticles = (page, filters) => async (dispatch) => {
 	dispatch(setPage(page || 1))
-	const data = await articlesAPI.getArticles(page = page || 'all', filterObj)
+	const data = await articlesAPI.getArticles(page, filters)
 	dispatch(setArticles(data))
 }
 

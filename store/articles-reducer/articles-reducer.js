@@ -7,11 +7,7 @@ const articlesReducer = createSlice({
 		articles: [],
 		page: 1,
 		articlesCount: 0,
-		filter: {
-			video: true,
-			article: true,
-			podcast: true,
-		},
+		filters: [],
 	},
 	reducers: {
 		setArticles: (state, action) => {
@@ -24,19 +20,14 @@ const articlesReducer = createSlice({
 		setPage: (state, action) => {
 			state.page = action.payload
 		},
-		setFilter: (state, action) => {
-			for (let filterParam in action.payload) {{
-					if (action.payload.hasOwnProperty(filterParam)){
-						state.filter[filterParam] = Boolean(action.payload[filterParam])
-					}
-				}
-			}
+		setFilters: (state, action) => {
+			state.filters = [...action.payload]
 		},
 
 
 	},
 })
 
-export const { setArticles, addArticles, setPage, setFilter } = articlesReducer.actions
+export const { setArticles, addArticles, setPage, setFilters} = articlesReducer.actions
 
 export default articlesReducer.reducer

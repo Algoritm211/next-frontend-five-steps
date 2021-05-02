@@ -2,8 +2,8 @@ import { instanceAxios } from './api-config'
 
 
 export const articlesAPI = {
-	getArticles: (page, filterObj) => {
-		return instanceAxios.get(`/article?article=${filterObj?.article || ''}&page=${page || ''}&podcast=${filterObj?.podcast || ''}&video=${filterObj?.video || ''}`)
+	getArticles: (page, filters) => {
+		return instanceAxios.get(`/article?page=${page}&filters=${filters.join(',')}`)
 			.then(data => data.data)
 	}
 }
