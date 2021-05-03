@@ -1,4 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
+import {deleteCookie} from "../../components/util-funcs/remove-cookie";
 
 const authReducer = createSlice({
   name: 'auth',
@@ -24,7 +25,7 @@ const authReducer = createSlice({
     logout(state) {
       state.userData = {}
       state.isAuth = false
-      localStorage.removeItem('authToken')
+      deleteCookie('authToken')
     },
     setAuthError(state, action) {
       state.authError = action.payload

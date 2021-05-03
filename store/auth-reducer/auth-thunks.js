@@ -7,6 +7,7 @@ import {
   setUserAuthData, setUserData, toggleIsLoading,
 } from './auth-reducer'
 import {authAPI} from "../../api/auth-api";
+import {deleteCookie} from "../../components/util-funcs/remove-cookie";
 
 export const registerUser = (userData) => async (dispatch) => {
   try {
@@ -42,7 +43,7 @@ export const authUser = () => async (dispatch) => {
   if (data.message) {
     setAuthError(data.message)
     dispatch(setAppReady(true))
-    localStorage.removeItem('authToken')
+    deleteCookie('authToken')
     setIsAuth({ isAuth: false })
     dispatch(toggleIsLoading(false))
   } else {
@@ -61,7 +62,7 @@ export const authGoogle = (userData) => async (dispatch) => {
     dispatch(setAppReady(true))
   } catch (error) {
     console.log(error)
-    localStorage.removeItem('authToken')
+    deleteCookie('authToken')
     setIsAuth({ isAuth: false })
     setAuthError(error.response?.data?.message)
     // alert(error.response.data.message)

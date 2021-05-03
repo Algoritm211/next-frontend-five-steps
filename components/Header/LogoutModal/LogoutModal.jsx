@@ -27,7 +27,7 @@ const LogoutModal = ({isModalOpen, setIsModalOpen}) => {
             <button onClick={() => setIsModalOpen(false)} type="button" className="btn btn-primary"
                     data-bs-dismiss="modal">Повернутися
             </button>
-            <Link href={'/main'}>
+            <Link href={'/'}>
               <a>
                 <button onClick={() => {
                   onLogout();

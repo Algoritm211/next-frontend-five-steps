@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import axios from "axios";
-import LoginPage from "../components/Login/Login";
+import LoginPage from "../components/Auth/Login";
 
 const Login = () => {
   const [email, setEmail] = useState('')

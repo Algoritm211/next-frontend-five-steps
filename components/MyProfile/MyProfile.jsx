@@ -25,7 +25,7 @@ const MyProfile = () => {
 	const dispatch = useDispatch()
 	const isLoading = useSelector(getIsLoading)
 	const isAuth = useSelector(getIsAuth)
-	const noUserPhotoPath = '/assets/user/nouserphoto.png'
+	const noUserPhoto = '/assets/user/nouserphoto.png'
 
 	const formik = useFormik({
 		enableReinitialize: true,
@@ -99,7 +99,7 @@ const MyProfile = () => {
 								</div>
 								<div className='col-12 col-md-8 col-lg-6 col-xl-5'>
 									<img className='avatar-img'
-											 src={user.avatar ? `${process.env.REACT_APP_URL}/${user.avatar}` : noUserPhotoPath}
+											 src={user.avatar ? `${process.env.REACT_APP_URL}/${user.avatar}` : noUserPhoto}
 											 alt='avatar' />
 									<input type={'file'} id={'avatar'} name={'avatar'} onChange={onHandleImage}
 												 multiple={false}

@@ -89,11 +89,11 @@ const Login = () => {
               </div>
               <div className='row'>
                 <div className='col-md-12'>
-                  <Link className='btn btn-lg btn-facebook btn-block btn-outline' href='#'>
-                    <>
+                  <Link href='#'>
+                    <a className='btn btn-lg btn-facebook btn-block btn-outline'>
                       <i className='fab fa-facebook' />
                       Login Using Facebook
-                    </>
+                    </a>
                   </Link>
                 </div>
               </div>
