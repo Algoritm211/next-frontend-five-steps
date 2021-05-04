@@ -11,6 +11,7 @@
     "@reduxjs/toolkit": "^1.5.1",
     "@tinymce/tinymce-react": "^3.12.3",
     "axios": "^0.21.1",
+    "express-session": "^1.17.1",
     "formik": "^2.2.6",
     "next": "10.2.0",
     "next-redux-wrapper": "^6.0.2",

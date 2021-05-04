@@ -13,6 +13,7 @@ import '../styles/MyRootStyles.css'
 import '../styles/LessonPage.css'
 import '../styles/Loader.css'
 import '../styles/Editor.css'
+import '../styles/error.css'
 import {wrapper} from "../store/store";
 import App from "next/app";
 import NextNProgress from "nextjs-progressbar";
