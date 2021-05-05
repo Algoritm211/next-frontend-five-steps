@@ -44,7 +44,7 @@ const Header = () => {
                 {user?.avatar ? (
                   <img className='avatar-img'
                        style={{width: '24px', height: '24px'}}
-                       src={user.avatar ? `${process.env.REACT_APP_URL}/${user.avatar}` : noUserPhoto}
+                       src={user.avatar ? `${process.env.NEXT_PUBLIC_APP_URL}/${user.avatar}` : noUserPhoto}
                        alt='avatar'/>
                 ) : (
                   <i className='fas fa-user-circle personIcon'/>
@@ -56,7 +56,7 @@ const Header = () => {
                       {user?.avatar ? (
                         <img className='avatar-img'
                              style={{width: '48px', height: '48px', marginRight: '15px'}}
-                             src={user.avatar ? `${process.env.REACT_APP_URL}/${user.avatar}` : noUserPhoto}
+                             src={user.avatar ? `${process.env.NEXT_PUBLIC_APP_URL}/${user.avatar}` : noUserPhoto}
                              alt='avatar'/>
                       ) : (
                         <i className='fas fa-user-circle accDropIcon'/>

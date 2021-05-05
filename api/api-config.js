@@ -1,6 +1,6 @@
 import axios from 'axios'
 
 export const instanceAxios = axios.create({
-  baseURL: `${process.env.REACT_APP_URL}/api/`,
+  baseURL: `${process.env.NEXT_PUBLIC_APP_URL}/api/`,
   withCredentials: true,
 })

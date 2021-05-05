@@ -11,8 +11,10 @@ import {getIsAuth, getIsLoading, getUserData} from '../../store/auth-reducer/aut
 import CourseModal from './CourseModal/CourseModal'
 import CourseCard from "../CoursesContainer/CourseCard/CourseCard";
 import Link from "next/link";
+import {useRouter} from "next/router";
 
 const MyProf = () => {
+  const router = useRouter()
   const user = useSelector(getUserData)
   const dispatch = useDispatch()
   const courses = useSelector(userCoursesSelector)
@@ -60,7 +62,7 @@ const MyProf = () => {
                 <div className='acc-info d-flex mb-5 mt-0'>
                   <div className={'courseContainer'} style={{width: '100%'}}>
                     {userCoursesBlock}
-                    {/*Если нет профессий, появляюется карточка ниже*/}
+                    {/*Если нет профессий, появляется карточка ниже*/}
                     {/*Кстати, когда нажимаешь на кнопку, то нужно, чтобы страница загружалась сверху*/}
                     <Link href='/professions' scroll={false}>
                       <a>
@@ -89,18 +91,16 @@ const MyProf = () => {
                   <div className='acc-info d-flex mt-0'>
                     <div className={'courseContainer'} style={{width: "100%"}}>
                       {userAuthorCoursesBlock}
-                      <Link href='' scroll={false}>
-                        <a href='#'>
-                          <div className='container add-course' onClick={() => setIsModalOpen(true)}>
-                            <div className='d-flex justify-content-center add-course-ill'>
-                              <i className='fas fa-plus-circle'/>
-                            </div>
-                            <div className='d-flex justify-content-center add-course-text'>
-                              <p>Створити курс</p>
-                            </div>
+                      <a href='#'>
+                        <div className='container add-course' onClick={() => setIsModalOpen(true)}>
+                          <div className='d-flex justify-content-center add-course-ill'>
+                            <i className='fas fa-plus-circle'/>
                           </div>
-                        </a>
-                      </Link>
+                          <div className='d-flex justify-content-center add-course-text'>
+                            <p>Створити курс</p>
+                          </div>
+                        </div>
+                      </a>
                     </div>
                   </div>
                 </div>

@@ -54,7 +54,7 @@ const Registration = () => {
 
 	const onGoogleAuth = () => {
 		const win = window.open(
-			`${process.env.REACT_APP_URL}/api/auth/google`,
+			`${process.env.NEXT_PUBLIC_APP_URL}/api/auth/google`,
 			'Auth',
 			'width=500,height=500,status=yes,toolbar=no,menubar=no,location=no',
 		)
@@ -67,7 +67,7 @@ const Registration = () => {
 	}
 
 	const onCatchGoogleLogin = (messageEvent) => {
-		if (messageEvent.origin === process.env.REACT_APP_URL) {
+		if (messageEvent.origin === process.env.NEXT_PUBLIC_APP_URL) {
 			const parsedData = JSON.parse(messageEvent.data)
 			parsedData['role'] = localStorage.getItem('isExpert') === 'true' ? 'expert' : 'student'
 			parsedData['fromGoogleAuth'] = true

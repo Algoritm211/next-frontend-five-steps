@@ -122,7 +122,7 @@ const CourseCard = (props) => {
 
           <div className='row ms-0 me-0'>
             <div className='col-2 pe-0 ps-0'>
-              <img src={author?.avatar ? `${process.env.REACT_APP_URL}/${author.avatar}` : noUserPhoto}
+              <img src={author?.avatar ? `${process.env.NEXT_PUBLIC_APP_URL}/${author.avatar}` : noUserPhoto}
                    className='img-avatar'
                    alt='' style={{borderRadius: '50%'}}/>
             </div>

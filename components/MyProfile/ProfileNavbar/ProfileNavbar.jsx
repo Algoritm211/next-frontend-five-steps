@@ -14,7 +14,7 @@ const ProfileNavbar = () => {
     <ul className='nav'>
       <li className='nav-item side-accElem'>
         <Link href={`/account/${user._id}`}>
-          <a className={`nav-link side-elem`} style={{color: router.pathname.indexOf('account') === -1 && 'black'}}>
+          <a className={`nav-link side-elem`} style={{color: router.pathname.indexOf('account') !== -1 && '#f26c4f'}}>
             <div className='sidebar-l'>
               <i className='far fa-user-circle side-accIll'/>
             </div>
@@ -26,7 +26,7 @@ const ProfileNavbar = () => {
       </li>
       <li className='nav-item side-accElem'>
         <Link href={`/myprof/${user._id}`}>
-          <a className='nav-item side-elem' style={{color: router.pathname.indexOf('myprof') === -1 && 'black'}}>
+          <a className='nav-item side-elem' style={{color: router.pathname.indexOf('myprof') !== -1 && '#f26c4f'}}>
             <div className='sidebar-l'>
               <i className='fas fa-briefcase side-accIll'/>
             </div>
@@ -38,7 +38,7 @@ const ProfileNavbar = () => {
       </li>
       <li className='nav-item side-accElem'>
         <Link href={`/settings/${user._id}`}>
-          <a className='nav-item side-elem' style={{color: router.pathname.indexOf('settings') === -1 && 'black'}}>
+          <a className='nav-item side-elem' style={{color: router.pathname.indexOf('settings') !== -1 && '#f26c4f'}}>
             <div className='sidebar-l'>
               <i className='fas fa-cog side-accIll'/>
             </div>
