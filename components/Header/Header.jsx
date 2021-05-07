@@ -13,7 +13,7 @@ const Header = () => {
   const [isModalOpen, setIsModalOpen] = useState(false)
 
   return (
-    <header id='header' className='fixed-top d-flex align-items-center'>
+    <header id='header' className={`fixed-top d-flex align-items-center`}>
       <div className='container d-flex align-items-center justify-content-between'>
         <div className={'d-flex'}>
           <div className='logo'>

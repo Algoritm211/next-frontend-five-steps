@@ -43,12 +43,13 @@ export const authUser = () => async (dispatch) => {
   if (data.message) {
     setAuthError(data.message)
     dispatch(setAppReady(true))
+    await localStorage.removeItem('authToken')
     deleteCookie('authToken')
     setIsAuth({ isAuth: false })
     dispatch(toggleIsLoading(false))
   } else {
     dispatch(setUserAuthData(data.user))
-    // localStorage.setItem('authToken', data.token)
+    localStorage.setItem('authToken', data.token)
     dispatch(setAppReady(true))
     dispatch(toggleIsLoading(false))
   }
