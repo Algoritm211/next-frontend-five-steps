@@ -28,7 +28,7 @@ export const loginUser = (email, password) => async (dispatch) => {
     await localStorage.setItem('authToken', data.token)
     dispatch(setUserAuthData(data.user))
     // window.location.reload()
-    window.location.assign('/')
+    // window.location.assign('/')
     dispatch(setAppReady(true))
   } catch (error) {
     dispatch(setAuthError(error.response.data.message))
