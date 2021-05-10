@@ -14,9 +14,10 @@ import { loadLesson } from '../../store/lesson-reducer/lesson-thunks'
 import { getCurrentCourse } from '../../store/courses-reducer/courses-selector'
 import {useRouter} from "next/router";
 import Loader from "../Loader/Loader";
+import Link from "next/link";
 
 
-const LessonPage = () => {
+const LessonPage = ({exerciseType = 'lesson'}) => {
 	const dispatch = useDispatch()
 	const router = useRouter()
 	const lesson = useSelector(getCurrentLesson)
@@ -45,7 +46,7 @@ const LessonPage = () => {
 
 	const onPageChange = (pageInfo) => {
 		dispatch(loadLesson(currentCourse._id, pageInfo.selected + 1))
-		router.push(`/lesson?courseId=${currentCourse._id}&lessonNumber=${pageInfo.selected + 1}`)
+		router.push(`/${exerciseType}?courseId=${currentCourse._id}&lessonNumber=${pageInfo.selected + 1}`)
 	}
 
 	return (
@@ -70,14 +71,21 @@ const LessonPage = () => {
 			<div className='container course-page mt-5'>
 				<div className='col-12 col-sm-12 col-md-8 course-content'>
 					<h1>{lesson.title}</h1>
-					<p className='courses-lecture mb-5' dangerouslySetInnerHTML={{ __html: lesson.body }}>
+					<p className='courses-lecture mb-5' dangerouslySetInnerHTML={{ __html: exerciseType === 'lesson' ? lesson.body : lesson.homeWork}}>
 						{/*{lesson.body}*/}
 					</p>
 					<div className='d-flex row'>
 						<div className='d-flex justify-content-start mb-5'>
-							<button className='guid-button'>
-								Наступна сторінка
-							</button>
+							{ ((+lessonNumber + 1 < 6) && exerciseType === 'homework' || exerciseType === 'lesson') && (
+								<Link href={exerciseType === 'lesson'
+									? `/homework?courseId=${currentCourse._id}&lessonNumber=${lessonNumber}`
+									: `/lesson?courseId=${currentCourse._id}&lessonNumber=${+lessonNumber + 1}`
+								}>
+									<button className='guid-button'>
+										Наступна сторінка
+									</button>
+								</Link>
+							)}
 						</div>
 					</div>
 				</div>
