@@ -27,8 +27,8 @@ export const loginUser = (email, password) => async (dispatch) => {
     const data = await authAPI.login(email, password)
     await localStorage.setItem('authToken', data.token)
     dispatch(setUserAuthData(data.user))
-    // window.location.reload()
-    // window.location.assign('/')
+    window.location.assign('/')
+    // document.cookie = `authToken=${data.token}; Expires=${new Date(Date.now() + 86400e3)}; Path=/; Domain=localhost;`
     dispatch(setAppReady(true))
   } catch (error) {
     dispatch(setAuthError(error.response.data.message))

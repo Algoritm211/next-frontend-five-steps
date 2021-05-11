@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start"
   },
+  "proxy": "https://1720e5b65695.ngrok.io",
   "dependencies": {
     "@reduxjs/toolkit": "^1.5.1",
     "@tinymce/tinymce-react": "^3.12.3",
