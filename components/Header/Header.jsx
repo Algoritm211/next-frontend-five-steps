@@ -3,6 +3,7 @@ import {useSelector} from "react-redux";
 import {getIsAuth, getUserData} from "../../store/auth-reducer/auth-selector";
 import Link from "next/link";
 import LogoutModal from "./LogoutModal/LogoutModal";
+import Dropdown from "../MyProfession/Dropdown";
 
 const Header = () => {
   const [searchText, setSearchText] = useState('')
@@ -22,7 +23,7 @@ const Header = () => {
           <nav id='navbar' className={`order-last order-lg-0 ${isMobile ? 'navbar-mobile' : 'navbar'}`}>
             <ul>
               <li><Link className='nav-link' href={'/professions'}>Професії</Link></li>
-              <li><Link className='nav-link' href={'/error'}>Спеціалісти</Link></li>
+              <li><a className='nav-link'><Dropdown /></a></li>
               <li><Link className='nav-link' href='/blog'>Профорієнтація</Link></li>
               <li><Link className='nav-link' href={'/error'}>Тарифи</Link></li>
             </ul>
