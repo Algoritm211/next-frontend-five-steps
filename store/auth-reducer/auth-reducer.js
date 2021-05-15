@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
-import {deleteCookie} from "../../components/util-funcs/remove-cookie";
+import { deleteCookie } from '../../components/util-funcs/remove-cookie'
 
 const authReducer = createSlice({
   name: 'auth',
@@ -8,7 +8,7 @@ const authReducer = createSlice({
     isAuth: false,
     authError: null,
     registrationError: null,
-    isLoading: false
+    isLoading: false,
   },
   reducers: {
     setIsAuth(state, action) {
@@ -38,7 +38,7 @@ const authReducer = createSlice({
     },
     toggleIsLoading(state, action) {
       state.isLoading = action.payload
-    }
+    },
   },
 })
 
@@ -50,7 +50,7 @@ export const {
   setUserAuthData,
   registrationSuccess,
   setRegistrationError,
-  toggleIsLoading
+  toggleIsLoading,
 } = authReducer.actions
 
 export default authReducer.reducer

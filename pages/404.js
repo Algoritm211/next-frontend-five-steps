@@ -1,6 +1,6 @@
-import React from 'react';
-import Link from "next/link";
-import Header from "../components/Header/Header";
+import React from 'react'
+import Link from 'next/link'
+import Header from '../components/Header/Header'
 
 const Error404 = () => {
   return (
@@ -10,17 +10,19 @@ const Error404 = () => {
       </div>
       <div className='container mt-5'>
         <h1 className='error-title'>404</h1>
-        <h3 className='error-subtitle'>Щось пішло не так.<br />Спробуйте ще раз</h3>
+        <h3 className='error-subtitle'>
+					Щось пішло не так.
+          <br />
+					Спробуйте ще раз
+        </h3>
         <div className='d-flex justify-content-center mt-5'>
-          <Link href="/">
-            <button className='error-button mb-1'>
-              На головну
-            </button>
+          <Link href='/'>
+            <button className='error-button mb-1'>На головну</button>
           </Link>
         </div>
       </div>
     </React.Fragment>
-  );
-};
+  )
+}
 
-export default Error404;
+export default Error404

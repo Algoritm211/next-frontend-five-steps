@@ -1,5 +1,5 @@
-import {combineReducers, configureStore} from "@reduxjs/toolkit";
-import {createWrapper, HYDRATE} from "next-redux-wrapper";
+import { combineReducers, configureStore } from '@reduxjs/toolkit'
+import { createWrapper } from 'next-redux-wrapper'
 import appReducer from './app-reducer/app-reducer'
 import authReducer from './auth-reducer/auth-reducer'
 import coursesReducer from './courses-reducer/courses-reducer'
@@ -11,13 +11,14 @@ const rootReducer = combineReducers({
   authReducer: authReducer,
   coursesReducer: coursesReducer,
   articlesReducer: articlesReducer,
-  lessonReducer: lessonReducer
+  lessonReducer: lessonReducer,
 })
 
 // create a makeStore function
-const makeStore = context => configureStore({
-  reducer: rootReducer,
-});
+const makeStore = (context) =>
+  configureStore({
+    reducer: rootReducer,
+  })
 
 // export an assembled wrapper
-export const wrapper = createWrapper(makeStore, {debug: false});
+export const wrapper = createWrapper(makeStore, { debug: false })

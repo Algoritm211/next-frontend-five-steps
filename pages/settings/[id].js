@@ -1,10 +1,8 @@
-import React from 'react';
-import MySettings from "../../components/MySettings/MySettings";
+import React from 'react'
+import MySettings from '../../components/MySettings/MySettings'
 
 const SettingsPage = () => {
-  return (
-    <MySettings />
-  );
-};
+  return <MySettings />
+}
 
-export default SettingsPage;
+export default SettingsPage

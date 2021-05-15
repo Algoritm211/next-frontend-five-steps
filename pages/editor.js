@@ -1,10 +1,8 @@
-import React from 'react';
-import Editor from "../components/Editor/Editor";
+import React from 'react'
+import Editor from '../components/Editor/Editor'
 
 const EditorPage = () => {
-  return (
-    <Editor />
-  );
-};
+  return <Editor />
+}
 
-export default EditorPage;
+export default EditorPage

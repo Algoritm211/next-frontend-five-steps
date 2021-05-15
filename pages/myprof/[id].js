@@ -1,10 +1,8 @@
-import React from 'react';
-import MyProf from "../../components/MyProfession/MyProf";
+import React from 'react'
+import MyProf from '../../components/MyProfession/MyProf'
 
 const MyProfessions = () => {
-  return (
-    <MyProf/>
-  );
-};
+  return <MyProf />
+}
 
-export default MyProfessions;
+export default MyProfessions

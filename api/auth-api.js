@@ -19,6 +19,6 @@ export const authAPI = {
     return instanceAxios
       .get('/auth/authorization')
       .then((data) => data.data)
-      .catch(err => err)
+      .catch((err) => err)
   },
 }

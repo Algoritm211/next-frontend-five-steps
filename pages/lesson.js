@@ -1,10 +1,8 @@
-import React from 'react';
-import LessonPage from "../components/LessonPage/LessonPage";
+import React from 'react'
+import LessonPage from '../components/LessonPage/LessonPage'
 
 const Lesson = () => {
-  return (
-    <LessonPage />
-  );
-};
+  return <LessonPage />
+}
 
-export default Lesson;
+export default Lesson

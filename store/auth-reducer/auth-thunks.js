@@ -4,14 +4,15 @@ import {
   setAuthError,
   setIsAuth,
   setRegistrationError,
-  setUserAuthData, setUserData, toggleIsLoading,
+  setUserAuthData,
+  toggleIsLoading,
 } from './auth-reducer'
-import {authAPI} from "../../api/auth-api";
-import {deleteCookie} from "../../components/util-funcs/remove-cookie";
+import { authAPI } from '../../api/auth-api'
+import { deleteCookie } from '../../components/util-funcs/remove-cookie'
 
 export const registerUser = (userData) => async (dispatch) => {
   try {
-    const data = await authAPI.registration(userData)
+    await authAPI.registration(userData)
 
     dispatch(loginUser(userData.email, userData.password))
     dispatch(registrationSuccess())

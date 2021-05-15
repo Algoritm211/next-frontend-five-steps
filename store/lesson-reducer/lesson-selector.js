@@ -1,11 +1,11 @@
 export const getCurrentLesson = (state) => {
-	return state.lessonReducer.currentLesson
+  return state.lessonReducer.currentLesson
 }
 
 export const getLessonPage = (state) => {
-	return state.lessonReducer.lessonPage
+  return state.lessonReducer.lessonPage
 }
 
 export const getLessonError = (state) => {
-	return state.lessonReducer.error
+  return state.lessonReducer.error
 }

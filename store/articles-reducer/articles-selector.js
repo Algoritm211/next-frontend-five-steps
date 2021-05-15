@@ -1,16 +1,15 @@
-
 export const getArticles = (state) => {
-	return state.articlesReducer.articles
+  return state.articlesReducer.articles
 }
 
 export const getPage = (state) => {
-	return state.articlesReducer.page
+  return state.articlesReducer.page
 }
 
 export const getArticlesCount = (state) => {
-	return state.articlesReducer.articlesCount
+  return state.articlesReducer.articlesCount
 }
 
 export const getArticlesFilters = (state) => {
-	return state.articlesReducer.filters
+  return state.articlesReducer.filters
 }
