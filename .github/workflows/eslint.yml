@@ -21,4 +21,4 @@ jobs:
         with:
           node-version: ${{ matrix.node_version }}
       - run: npm 
-      - run: npm lint:eslint
+      - run: npm run lint:eslint
