@@ -25,8 +25,8 @@
     "require-jsdoc": "off",
     "no-invalid-this": "off",
     "linebreak-style": "off",
-    "no-tabs": ["error", { "allowIndentationTabs": true }],
     "react/prop-types": 0,
+    "no-trailing-spaces": "off",
     "semi": ["error", "never"]
   }
 }

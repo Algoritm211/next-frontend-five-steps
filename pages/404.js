@@ -11,9 +11,9 @@ const Error404 = () => {
       <div className='container mt-5'>
         <h1 className='error-title'>404</h1>
         <h3 className='error-subtitle'>
-					Щось пішло не так.
+          Щось пішло не так.
           <br />
-					Спробуйте ще раз
+          Спробуйте ще раз
         </h3>
         <div className='d-flex justify-content-center mt-5'>
           <Link href='/'>
