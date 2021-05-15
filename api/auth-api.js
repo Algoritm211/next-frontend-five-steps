@@ -5,7 +5,7 @@ export const authAPI = {
     if (!userData.password) {
       userData['password'] = 'auth-google'
     }
-    return await instanceAxios
+    return instanceAxios
       .post('/auth/registration', { ...userData })
       .then((data) => data.data)
   },
