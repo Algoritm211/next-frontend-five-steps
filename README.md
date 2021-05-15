@@ -1,4 +1,8 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<p align="center">
+  <img src="https://github.com/Algoritm211/next-frontend-five-steps/actions/workflows/eslint.yml/badge.svg">
+  <img src="https://img.shields.io/badge/license-MIT-blue.svg">
+</p>
 
 # Run app on your machine
 
