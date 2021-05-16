@@ -1,14 +1,14 @@
-import React from 'react';
-import Menubar from "react-responsive-multi-level-menu";
+import React from 'react'
+import Menubar from 'react-responsive-multi-level-menu'
 
 
 const Dropdown = () => {
   const menuItems = [
-    {value: "Fashion", items: [{value: "Men", items: [{value: "Shirts"}]}]},
-    {value: "Electronics", items: []},
-    {value: "Furnitures", items: []},
-    {value: "Jewelery&watches", items: []}
-  ];
+    { value: 'Fashion', items: [{ value: 'Men', items: [{ value: 'Shirts' }] }] },
+    { value: 'Electronics', items: [] },
+    { value: 'Furnitures', items: [] },
+    { value: 'Jewelery&watches', items: [] },
+  ]
 
   return (
     <Menubar
@@ -16,7 +16,7 @@ const Dropdown = () => {
       hamBurgerClassName={'burgerMultiplyCustom'}
       menuContainerWidth={200}
     />
-  );
-};
+  )
+}
 
-export default Dropdown;
+export default Dropdown

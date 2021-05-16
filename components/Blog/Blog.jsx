@@ -1,17 +1,17 @@
-import React, {useEffect, useState} from 'react';
-import styles from "../MainLayout/MainPage.module.css";
-import Header from "../Header/Header";
-import ReactPaginate from "react-paginate";
-import {useRouter} from "next/router";
-import {useDispatch, useSelector} from "react-redux";
-import {getArticlesFilters, getPage} from "../../store/articles-reducer/articles-selector";
-import {setFilters} from "../../store/articles-reducer/articles-reducer";
-import {getAllCourses} from "../../store/courses-reducer/courses-thunks";
-import ArticleCard from "./ArticleCard/ArticleCard";
+import React, { useEffect, useState } from 'react'
+import styles from '../MainLayout/MainPage.module.css'
+import Header from '../Header/Header'
+import ReactPaginate from 'react-paginate'
+import { useRouter } from 'next/router'
+import { useDispatch, useSelector } from 'react-redux'
+import { getArticlesFilters, getPage } from '../../store/articles-reducer/articles-selector'
+import { setFilters } from '../../store/articles-reducer/articles-reducer'
+import { getAllCourses } from '../../store/courses-reducer/courses-thunks'
+import ArticleCard from './ArticleCard/ArticleCard'
 
 export const allFiltersOnPage = ['article', 'video', 'podcast']
 
-const Blog = ({articles, articlesCount}) => {
+const Blog = ({ articles, articlesCount }) => {
   const router = useRouter()
   const dispatch = useDispatch()
   const filters = useSelector(getArticlesFilters)
@@ -43,9 +43,9 @@ const Blog = ({articles, articlesCount}) => {
     const category = event.target.getAttribute('name')
     let newFilters = [...filters]
     if (filters.includes(category)) {
-      newFilters = newFilters.filter(item => item !== category)
+      newFilters = newFilters.filter((item) => item !== category)
       if (newFilters.length !== allFiltersOnPage.length) {
-        newFilters = newFilters.filter(item => item !== 'all')
+        newFilters = newFilters.filter((item) => item !== 'all')
       }
     } else {
       newFilters.push(category)
@@ -71,19 +71,19 @@ const Blog = ({articles, articlesCount}) => {
           <div className='guid-journal-results mt-5 mb-3'>
             <div className='d-flex guid-journal-l'>
               <span className='guid-materials'>Показано матеріалів: {articles.length} з&nbsp;</span><span
-              className='guid-materials'>{articlesCount}</span>
+                className='guid-materials'>{articlesCount}</span>
             </div>
             <div className='d-flex guid-journal-r'>
               <input className='guid-checkbox' type='checkbox' onChange={onFilterChange}
-                     checked={filters.includes('article')}
-                     id='articles'
-                     name='article' />
+                checked={filters.includes('article')}
+                id='articles'
+                name='article' />
               <label className='guid-label' htmlFor='article'>Статті</label>
               <input type='checkbox' id='podcasts' name='podcast' onChange={onFilterChange}
-                     checked={filters.includes('podcast')} />
+                checked={filters.includes('podcast')} />
               <label className='guid-label' htmlFor='podcast'>Подкасти</label>
               <input type='checkbox' id='video' name='video' onChange={onFilterChange}
-                     checked={filters.includes('video')} />
+                checked={filters.includes('video')} />
               <label className='guid-label' htmlFor='video'>Відео</label>
             </div>
           </div>
@@ -133,17 +133,7 @@ const Blog = ({articles, articlesCount}) => {
         </div>
       </div>
     </React.Fragment>
-  );
-};
-
-export default Blog;
-
-function filterArticles(articlesArray, filterObj) {
-  const newArticleArray = []
-  articlesArray.forEach((article) => {
-    if (filterObj[article.category]) {
-      newArticleArray.push(article)
-    }
-  })
-  return newArticleArray
+  )
 }
+
+export default Blog

@@ -1,9 +1,9 @@
-import React, {useState} from 'react';
-import {useSelector} from "react-redux";
-import {getIsAuth, getUserData} from "../../store/auth-reducer/auth-selector";
-import Link from "next/link";
-import LogoutModal from "./LogoutModal/LogoutModal";
-import Dropdown from "../MyProfession/Dropdown";
+import React, { useState } from 'react'
+import { useSelector } from 'react-redux'
+import { getIsAuth, getUserData } from '../../store/auth-reducer/auth-selector'
+import Link from 'next/link'
+import LogoutModal from './LogoutModal/LogoutModal'
+import Dropdown from '../MyProfession/Dropdown'
 
 const Header = () => {
   const [searchText, setSearchText] = useState('')
@@ -18,7 +18,7 @@ const Header = () => {
       <div className='container d-flex align-items-center justify-content-between'>
         <div className={'d-flex'}>
           <div className='logo'>
-            <h1><Link href={'/'} style={{lineHeight: '40px'}}>Logo</Link></h1>
+            <h1><Link href={'/'} style={{ lineHeight: '40px' }}>Logo</Link></h1>
           </div>
           <nav id='navbar' className={`order-last order-lg-0 ${isMobile ? 'navbar-mobile' : 'navbar'}`}>
             <ul>
@@ -36,19 +36,19 @@ const Header = () => {
             onChange={(event) => setSearchText(event.target.value)}
             type={'text'}
             className={`${isActiveSearch ? 'input-active' : 'input-deactive'}`}
-            placeholder={'Пошук'}/>
+            placeholder={'Пошук'} />
           <nav id='navbar-right' className={`navbar-right order-last order-lg-0`}
-               style={{marginLeft: 'auto!important'}}>
+            style={{ marginLeft: 'auto!important' }}>
             <ul>
-              <i className='fas fa-search personIcon' onClick={() => setIsActiveSearch(prev => !prev)}/>
+              <i className='fas fa-search personIcon' onClick={() => setIsActiveSearch((prev) => !prev)} />
               <li className='dropdown'>
                 {user?.avatar ? (
                   <img className='avatar-img'
-                       style={{width: '24px', height: '24px'}}
-                       src={user.avatar ? `${process.env.NEXT_PUBLIC_APP_URL}/${user.avatar}` : noUserPhoto}
-                       alt='avatar'/>
+                    style={{ width: '24px', height: '24px' }}
+                    src={user.avatar ? `${process.env.NEXT_PUBLIC_APP_URL}/${user.avatar}` : noUserPhoto}
+                    alt='avatar' />
                 ) : (
-                  <i className='fas fa-user-circle personIcon'/>
+                  <i className='fas fa-user-circle personIcon' />
                 )}
                 <ul>
                   {isAuth &&
@@ -56,25 +56,25 @@ const Header = () => {
                     <div className='d-flex accDropBlock'>
                       {user?.avatar ? (
                         <img className='avatar-img'
-                             style={{width: '48px', height: '48px', marginRight: '15px'}}
-                             src={user.avatar ? `${process.env.NEXT_PUBLIC_APP_URL}/${user.avatar}` : noUserPhoto}
-                             alt='avatar'/>
+                          style={{ width: '48px', height: '48px', marginRight: '15px' }}
+                          src={user.avatar ? `${process.env.NEXT_PUBLIC_APP_URL}/${user.avatar}` : noUserPhoto}
+                          alt='avatar' />
                       ) : (
-                        <i className='fas fa-user-circle accDropIcon'/>
+                        <i className='fas fa-user-circle accDropIcon' />
                       )}
                       <div className='ml-3 lh-1'>
                         <p className='mb-1 accDropTitle'>{user?.name}</p>
                         <p className='mb-0 text-muted'>{user?.email}</p>
                       </div>
                     </div>
-                    <div className='dropdown-divider'/>
+                    <div className='dropdown-divider' />
                   </div>
                   }
                   <li>
                     {!isAuth ? (
                       <Link href='/login'>
                         <a>
-                          <i className='far fa-user-circle' style={{marginRight: '10px'}}/>
+                          <i className='far fa-user-circle' style={{ marginRight: '10px' }} />
                           Вхід
                         </a>
                       </Link>
@@ -82,25 +82,25 @@ const Header = () => {
                       <>
                         <Link href={`/account/${user._id}`}>
                           <a>
-                            <i className='far fa-user-circle' style={{marginRight: '10px'}}/>
+                            <i className='far fa-user-circle' style={{ marginRight: '10px' }} />
                             Акаунт
                           </a>
                         </Link>
                         <Link href={`/myprof/${user._id}`}>
                           <a>
-                            <i className='fas fa-briefcase' style={{marginRight: '10px'}}/>
+                            <i className='fas fa-briefcase' style={{ marginRight: '10px' }} />
                             Мої Професії
                           </a>
                         </Link>
                         <Link href={`/settings/${user._id}`}>
                           <a>
-                            <i className='fas fa-cog' style={{marginRight: '10px'}}/>
+                            <i className='fas fa-cog' style={{ marginRight: '10px' }} />
                             Налаштування
                           </a>
                         </Link>
-                        <div className='dropdown-divider'/>
+                        <div className='dropdown-divider' />
                         <a onClick={() => setIsModalOpen(true)}>
-                          <i className="fas fa-power-off" style={{marginRight: '10px'}}/>
+                          <i className='fas fa-power-off' style={{ marginRight: '10px' }} />
                           Вихід
                         </a>
 
@@ -111,7 +111,7 @@ const Header = () => {
                     {!isAuth && (
                       <Link href={'/registration'}>
                         <a>
-                          <i className="fas fa-sign-in-alt" style={{marginRight: '10px'}}/>
+                          <i className='fas fa-sign-in-alt' style={{ marginRight: '10px' }} />
                           Реєстрація
                         </a>
                       </Link>
@@ -122,15 +122,15 @@ const Header = () => {
               </li>
               <li>
                 <i className={`mobile-nav-toggle ${!isMobile ? 'fas fa-bars' : 'fa fa-times'}`}
-                   onClick={() => setIsMobile(prev => !prev)}/>
+                  onClick={() => setIsMobile((prev) => !prev)} />
               </li>
             </ul>
           </nav>
         </div>
       </div>
-      <LogoutModal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen}/>
+      <LogoutModal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
     </header>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

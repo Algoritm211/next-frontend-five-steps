@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint:eslint": "npx eslint --ext .jsx,.js pages/"
+    "lint:eslint": "npx eslint --ext .jsx,.js ."
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.5.1",
