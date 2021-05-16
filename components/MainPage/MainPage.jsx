@@ -1,11 +1,7 @@
-import React from 'react';
-import Link from "next/link";
-import {useSelector} from "react-redux";
-import {getIsAuth} from "../../store/auth-reducer/auth-selector";
+import React from 'react'
+import Link from 'next/link'
 
 const MainPage = () => {
-  const isAuth = useSelector(getIsAuth)
-
   return (
     <div className='mainContainer'>
       <div className='item N1'>
@@ -18,7 +14,7 @@ const MainPage = () => {
       <div className='subGrid justify-content-center'>
         <div className='item N2'>
           <div className='d-flex'
-               style={{ height: '100%', width: '100%', flexDirection: 'column', justifyContent: 'flex-end' }}>
+            style={{ height: '100%', width: '100%', flexDirection: 'column', justifyContent: 'flex-end' }}>
             <div className=''>
               <div className='col-12'><h6 className='text-dark'>Інтервью з Ілоном Маском</h6>
                 <h3>Як це, бути щасливим?</h3></div>
@@ -66,17 +62,17 @@ const MainPage = () => {
           </div>
           <div className='item N8 d-flex align-items-center justify-content-center'>
             <iframe width='100%' height='100%' src='https://www.youtube.com/embed/dQw4w9WgXcQ'
-                    title='YouTube video player' frameBorder='0'
-                    allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-                    allowFullScreen/>
+              title='YouTube video player' frameBorder='0'
+              allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+              allowFullScreen />
           </div>
         </div>
         <div className='item N9 d-flex align-items-center justify-content-center'>
-          <h3 className='text-dark'>Технологія "5 кроків"</h3>
+          <h3 className='text-dark'>Технологія '5 кроків'</h3>
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default MainPage;
+export default MainPage

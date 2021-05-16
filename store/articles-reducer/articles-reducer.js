@@ -25,7 +25,6 @@ const articlesReducer = createSlice({
   },
 })
 
-export const { setArticles, addArticles, setPage, setFilters } =
-	articlesReducer.actions
+export const { setArticles, addArticles, setPage, setFilters } = articlesReducer.actions
 
 export default articlesReducer.reducer

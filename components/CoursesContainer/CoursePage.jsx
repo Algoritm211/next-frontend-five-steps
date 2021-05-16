@@ -1,12 +1,12 @@
-import React from 'react';
-import {useRouter} from "next/router";
-import {useDispatch, useSelector} from "react-redux";
-import {getUserData} from "../../store/auth-reducer/auth-selector";
-import {subscribeToCourse, unsubscribeCourse} from "../../store/courses-reducer/courses-thunks";
-import Link from "next/link";
-import MainLayout from "../MainLayout/MainLayout";
+import React from 'react'
+import { useRouter } from 'next/router'
+import { useDispatch, useSelector } from 'react-redux'
+import { getUserData } from '../../store/auth-reducer/auth-selector'
+import { subscribeToCourse, unsubscribeCourse } from '../../store/courses-reducer/courses-thunks'
+import Link from 'next/link'
+import MainLayout from '../MainLayout/MainLayout'
 
-const CoursePage = ({course}) => {
+const CoursePage = ({ course }) => {
   const router = useRouter()
   const user = useSelector(getUserData)
 
@@ -31,11 +31,11 @@ const CoursePage = ({course}) => {
               {user?.courses?.includes(course._id) ? (
                 <Link href={`/lesson?courseId=${course._id}&lessonNumber=1`}>
                   <button className='preview-button mb-1'
-                          style={{
-                            backgroundColor: 'white',
-                            color: '#384046',
-                            border: '1px solid #f26c4f',
-                          }}>
+                    style={{
+                      backgroundColor: 'white',
+                      color: '#384046',
+                      border: '1px solid #f26c4f',
+                    }}>
                     Перейти до курсу
                   </button>
                 </Link>
@@ -46,11 +46,11 @@ const CoursePage = ({course}) => {
               )}
             </div>
           </div>
-          <div className='d-flex m-auto col-12 col-md-6 justify-content-center' style={{padding: '0 25%'}}>
+          <div className='d-flex m-auto col-12 col-md-6 justify-content-center' style={{ padding: '0 25%' }}>
 
             <img className='preview-image'
-                 src='https://cdn.mos.cms.futurecdn.net/6bxva8DmZvNj8kaVrQZZMP.jpg'
-                 alt='graphic-design' width="100%"/>
+              src='https://cdn.mos.cms.futurecdn.net/6bxva8DmZvNj8kaVrQZZMP.jpg'
+              alt='graphic-design' width='100%' />
 
           </div>
         </div>
@@ -112,23 +112,23 @@ const CoursePage = ({course}) => {
           <>
             <Link href={`/lesson?courseId=${course._id}&lessonNumber=1`}>
               <button className='preview-button mb-3'
-                      style={{
-                        backgroundColor: 'white',
-                        color: '#384046',
-                        border: '1px solid #f26c4f',
-                        marginLeft: '20px',
-                        marginRight: '20px',
-                      }}>
+                style={{
+                  backgroundColor: 'white',
+                  color: '#384046',
+                  border: '1px solid #f26c4f',
+                  marginLeft: '20px',
+                  marginRight: '20px',
+                }}>
                 Перейти до курсу
               </button>
             </Link>
             <button className='preview-button mb-3'
-                    onClick={unsubscribeHandler}
-                    style={{
-                      backgroundColor: 'crimson',
-                      marginLeft: '20px',
-                      marginRight: '20px',
-                    }}>
+              onClick={unsubscribeHandler}
+              style={{
+                backgroundColor: 'crimson',
+                marginLeft: '20px',
+                marginRight: '20px',
+              }}>
               Відписатися від курсу
             </button>
           </>
@@ -140,7 +140,7 @@ const CoursePage = ({course}) => {
 
       </div>
     </MainLayout>
-  );
-};
+  )
+}
 
-export default CoursePage;
+export default CoursePage

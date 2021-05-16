@@ -23,6 +23,5 @@ const lessonReducer = createSlice({
   },
 })
 
-export const { setCurrentLesson, setLessonPage, setError, clearCurrentLesson } =
-	lessonReducer.actions
+export const { setCurrentLesson, setLessonPage, setError, clearCurrentLesson } = lessonReducer.actions
 export default lessonReducer.reducer

@@ -1,17 +1,16 @@
-import React, {useEffect, useState} from 'react';
-import {useRouter} from "next/router";
-import {useDispatch, useSelector} from "react-redux";
-import {getFilters, getPage} from "../../store/courses-reducer/courses-selector";
-import {setFilters} from "../../store/courses-reducer/courses-reducer";
-import {getAllCourses} from "../../store/courses-reducer/courses-thunks";
-import CourseCard from "./CourseCard/CourseCard";
-import ReactPaginate from "react-paginate";
-import MainLayout from "../MainLayout/MainLayout";
+import React, { useEffect, useState } from 'react'
+import { useRouter } from 'next/router'
+import { useDispatch, useSelector } from 'react-redux'
+import { getFilters, getPage } from '../../store/courses-reducer/courses-selector'
+import { setFilters } from '../../store/courses-reducer/courses-reducer'
+import { getAllCourses } from '../../store/courses-reducer/courses-thunks'
+import CourseCard from './CourseCard/CourseCard'
+import ReactPaginate from 'react-paginate'
+import MainLayout from '../MainLayout/MainLayout'
 
 export const allFiltersOnPage = ['design', 'all', 'business', 'education', 'marketing', 'it']
 
-const CoursesContainer = ({professions, coursesCount}) => {
-
+const CoursesContainer = ({ professions, coursesCount }) => {
   const router = useRouter()
   // console.log(professions)
 
@@ -49,9 +48,9 @@ const CoursesContainer = ({professions, coursesCount}) => {
       dispatch(getAllCourses(page, allFiltersOnPage))
       return
     } else if (filters.includes(category)) {
-      newFilters = newFilters.filter(item => item !== category)
+      newFilters = newFilters.filter((item) => item !== category)
       if (newFilters.length !== allFiltersOnPage.length) {
-        newFilters = newFilters.filter(item => item !== 'all')
+        newFilters = newFilters.filter((item) => item !== 'all')
       }
     } else {
       newFilters.push(category)
@@ -74,7 +73,7 @@ const CoursesContainer = ({professions, coursesCount}) => {
   }
   const allCoursesBlock = professions.map((course, index) => {
     if (course.isReady !== false) {
-      return <CourseCard course={course} key={index}/>
+      return <CourseCard course={course} key={index} />
     }
   })
 
@@ -93,50 +92,50 @@ const CoursesContainer = ({professions, coursesCount}) => {
               <div className='courses-filters mb-5 mt-3'>
                 <div className='d-flex courses-filter'>
                   <input className='d-flex courses-checkbox'
-                         type='checkbox'
-                         onChange={onFilterChange} checked={filters.includes('all')}
-                         id='all'
-                         name='all'/>
+                    type='checkbox'
+                    onChange={onFilterChange} checked={filters.includes('all')}
+                    id='all'
+                    name='all' />
                   <label className='d-flex courses-label' htmlFor='all'>Усі теми</label>
                 </div>
                 <div className='d-flex courses-filter'>
                   <input className='courses-checkbox'
-                         type='checkbox'
-                         onChange={onFilterChange} checked={filters.includes('design')}
-                         id='design'
-                         name='design'/>
+                    type='checkbox'
+                    onChange={onFilterChange} checked={filters.includes('design')}
+                    id='design'
+                    name='design' />
                   <label className='courses-label' htmlFor='design'>Дизайнер</label>
                 </div>
                 <div className='d-flex courses-filter'>
                   <input className='courses-checkbox'
-                         type='checkbox'
-                         onChange={onFilterChange} checked={filters.includes('business')}
-                         id='business'
-                         name='business'/>
+                    type='checkbox'
+                    onChange={onFilterChange} checked={filters.includes('business')}
+                    id='business'
+                    name='business' />
                   <label className='courses-label' htmlFor='business'>Бізнес</label>
                 </div>
                 <div className='d-flex courses-filter'>
                   <input className='courses-checkbox'
-                         type='checkbox'
-                         onChange={onFilterChange} checked={filters.includes('education')}
-                         id='education'
-                         name='education'/>
+                    type='checkbox'
+                    onChange={onFilterChange} checked={filters.includes('education')}
+                    id='education'
+                    name='education' />
                   <label className='courses-label' htmlFor='education'>Освіта</label>
                 </div>
                 <div className='d-flex courses-filter'>
                   <input className='courses-checkbox'
-                         type='checkbox'
-                         onChange={onFilterChange} checked={filters.includes('marketing')}
-                         id='marketing'
-                         name='marketing'/>
+                    type='checkbox'
+                    onChange={onFilterChange} checked={filters.includes('marketing')}
+                    id='marketing'
+                    name='marketing' />
                   <label className='courses-label' htmlFor='marketing'>Маркетинг</label>
                 </div>
                 <div className='d-flex courses-filter'>
                   <input className='courses-checkbox'
-                         type='checkbox'
-                         onChange={onFilterChange} checked={filters.includes('it')}
-                         id='it'
-                         name='it'/>
+                    type='checkbox'
+                    onChange={onFilterChange} checked={filters.includes('it')}
+                    id='it'
+                    name='it' />
                   <label className='courses-label' htmlFor='it'>IT</label>
                 </div>
               </div>
@@ -150,10 +149,10 @@ const CoursesContainer = ({professions, coursesCount}) => {
           <div className='col-12 col-md-9 col-lg-9 col-xl-10'>
             <div className='d-flex mb-3'>
               <span className='course-materials'>Показано матеріалів: {professions.length} з&nbsp;</span><span
-              className='course-materials'>{coursesCount}</span>
-              <a className='mobile-filter-toggle' onClick={() => setIsSmall(prev => !prev)}>
-                <i className={`${!isSmall ? 'fas fa-sliders-h' : 'fa fa-times'}`}/>
-                <span style={{marginLeft: '5px'}}>Фільтри</span>
+                className='course-materials'>{coursesCount}</span>
+              <a className='mobile-filter-toggle' onClick={() => setIsSmall((prev) => !prev)}>
+                <i className={`${!isSmall ? 'fas fa-sliders-h' : 'fa fa-times'}`} />
+                <span style={{ marginLeft: '5px' }}>Фільтри</span>
               </a>
             </div>
             <div className='pagination-wrap mobile-pagination mb-5'>
@@ -167,14 +166,14 @@ const CoursesContainer = ({professions, coursesCount}) => {
                 pageLinkClassName={'pagination-link'}
                 containerClassName={'pagination-container'}
                 previousClassName={'pagination-prev'}
-                previousLabel={<i className='fas fa-long-arrow-alt-left'/>}
-                nextLabel={<i className='fas fa-long-arrow-alt-right'/>}
-                breakLabel={<i className='fas fa-ellipsis-h pagination-break'/>}
+                previousLabel={<i className='fas fa-long-arrow-alt-left' />}
+                nextLabel={<i className='fas fa-long-arrow-alt-right' />}
+                breakLabel={<i className='fas fa-ellipsis-h pagination-break' />}
                 nextClassName={'pagination-next'}
                 previousLinkClassName={'pagination-arrow'}
                 nextLinkClassName={'pagination-arrow'}
                 disabledClassName={'pagination-disabled'}
-                activeClassName={'pagination-active'}/>
+                activeClassName={'pagination-active'} />
             </div>
             <div className={'courseContainer mb-5'}>
               {allCoursesBlock}
@@ -190,20 +189,20 @@ const CoursesContainer = ({professions, coursesCount}) => {
                 pageLinkClassName={'pagination-link'}
                 containerClassName={'pagination-container'}
                 previousClassName={'pagination-prev'}
-                previousLabel={<i className='fas fa-long-arrow-alt-left'/>}
-                nextLabel={<i className='fas fa-long-arrow-alt-right'/>}
-                breakLabel={<i className='fas fa-ellipsis-h pagination-break'/>}
+                previousLabel={<i className='fas fa-long-arrow-alt-left' />}
+                nextLabel={<i className='fas fa-long-arrow-alt-right' />}
+                breakLabel={<i className='fas fa-ellipsis-h pagination-break' />}
                 nextClassName={'pagination-next'}
                 previousLinkClassName={'pagination-arrow'}
                 nextLinkClassName={'pagination-arrow'}
                 disabledClassName={'pagination-disabled'}
-                activeClassName={'pagination-active'}/>
+                activeClassName={'pagination-active'} />
             </div>
           </div>
         </div>
       </div>
     </MainLayout>
-  );
-};
+  )
+}
 
-export default CoursesContainer;
+export default CoursesContainer

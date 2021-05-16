@@ -1,9 +1,9 @@
-import React from 'react';
-import {useFormik} from "formik";
+import React from 'react'
+import { useFormik } from 'formik'
 import * as Yup from 'yup'
-import Link from "next/link";
-import {useDispatch} from "react-redux";
-import {loginUser} from "../../store/auth-reducer/auth-thunks";
+import Link from 'next/link'
+import { useDispatch } from 'react-redux'
+import { loginUser } from '../../store/auth-reducer/auth-thunks'
 
 const loginValidationSchema = Yup.object().shape({
   email: Yup.string()
@@ -26,7 +26,7 @@ const Login = () => {
       email: '',
       password: '',
     },
-    onSubmit: values => {
+    onSubmit: (values) => {
       dispatch(loginUser(values.email, values.password))
     },
   })
@@ -82,7 +82,8 @@ const Login = () => {
               </div>
               <div className='row'>
                 <div className='col-md-12'>
-                  <button onClick={() => {}} className='btn btn-lg btn-google btn-block btn-outline'>
+                  <button onClick={() => {
+                  }} className='btn btn-lg btn-google btn-block btn-outline'>
                     <img src='https://img.icons8.com/color/16/000000/google-logo.png' /> Login Using Google
                   </button>
                 </div>
@@ -100,6 +101,7 @@ const Login = () => {
             </div>
 
             <p className='loginhere'>
+              {/* eslint-disable-next-line react/no-unescaped-entities */}
               Don't have an account?&nbsp;
               <Link href={'/registration'} className='loginhere-link cup'>Sign up</Link>
             </p>
@@ -108,7 +110,7 @@ const Login = () => {
 
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Login;
+export default Login
